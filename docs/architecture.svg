@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title description">
+  <title id="title">Production-scale vacation rental marketplace architecture</title>
+  <desc id="description">A high-level architecture showing the browser clients, global edge, application services, data stores, asynchronous processing and deployment platform used to operate a global vacation-rental marketplace.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity=".10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6b7280"/></marker>
+    <style>
+      .title { font: 700 40px Arial, Helvetica, sans-serif; fill: #172033; }
+      .subtitle { font: 400 18px Arial, Helvetica, sans-serif; fill: #64748b; }
+      .lane { font: 700 14px Arial, Helvetica, sans-serif; letter-spacing: 1.5px; fill: #475569; }
+      .card-title { font: 700 18px Arial, Helvetica, sans-serif; fill: #172033; }
+      .card-text { font: 400 14px Arial, Helvetica, sans-serif; fill: #526174; }
+      .small { font: 600 12px Arial, Helvetica, sans-serif; fill: #526174; }
+      .tag { font: 700 11px Arial, Helvetica, sans-serif; fill: #24435d; letter-spacing: .4px; }
+      .arrow { fill: none; stroke: #718096; stroke-width: 2.2; marker-end: url(#arrow); }
+      .dashed { fill: none; stroke: #9aa8b8; stroke-width: 2; stroke-dasharray: 8 8; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1920" height="108" fill="#ffffff"/>
+  <line x1="60" y1="108" x2="1860" y2="108" stroke="#e2e8f0"/>
+  <text x="68" y="57" class="title">Production-scale vacation-rental marketplace</text>
+  <text x="68" y="86" class="subtitle">Global, event-driven architecture for discovery, bookings, payments and reliable host–guest experiences</text>
+  <rect x="1585" y="35" width="265" height="38" rx="19" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="1610" y="59" class="small" fill="#047857">MULTI-REGION • AUTO-SCALING</text>
+
+  <text x="68" y="151" class="lane">EXPERIENCE &amp; GLOBAL EDGE</text>
+  <rect x="50" y="172" width="1820" height="178" rx="22" fill="#edf6ff" stroke="#c9e2fa"/>
+  <rect x="78" y="208" width="184" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="110" cy="242" r="16" fill="#dbeafe"/><path d="M101 248c3-10 15-10 18 0M105 237a5 5 0 1 0 10 0" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="137" y="241" class="card-title">Guests &amp; hosts</text><text x="137" y="265" class="card-text">Web and mobile apps</text><text x="96" y="291" class="small">Accessible, localized UI</text>
+  <rect x="330" y="208" width="200" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="362" cy="242" r="16" fill="#dbeafe"/><path d="M352 242h20M362 232c5 5 5 15 0 20M362 232c-5 5-5 15 0 20" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="389" y="241" class="card-title">DNS, CDN &amp; WAF</text><text x="356" y="266" class="card-text">TLS, DDoS protection, image cache</text><text x="356" y="291" class="small">Anycast routing • edge cache</text>
+  <rect x="598" y="208" width="250" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="630" cy="242" r="16" fill="#fce7f3"/><path d="M622 250l8-16 8 16M625 244h10" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round"/>
+  <text x="657" y="241" class="card-title">Frontend delivery</text><text x="624" y="266" class="card-text">React web • native mobile • BFF</text><text x="624" y="291" class="small">SSR / static assets • feature flags</text>
+  <rect x="916" y="208" width="238" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="948" cy="242" r="16" fill="#ede9fe"/><path d="M940 241h16M948 233v16M942 235l12 12M954 235l-12 12" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"/>
+  <text x="975" y="241" class="card-title">API gateway</text><text x="942" y="266" class="card-text">Rate limits, auth, routing, versioning</text><text x="942" y="291" class="small">REST / GraphQL • request tracing</text>
+  <rect x="1222" y="208" width="286" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="1254" cy="242" r="16" fill="#fef3c7"/><path d="M1246 247h16v-10h-16zM1250 233h8" fill="none" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/>
+  <text x="1281" y="241" class="card-title">Identity &amp; trust</text><text x="1248" y="266" class="card-text">OAuth, MFA, KYC, fraud signals</text><text x="1248" y="291" class="small">PII controls • consent ledger</text>
+  <rect x="1576" y="208" width="260" height="104" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1600" y="241" class="card-title">Observability</text><text x="1600" y="266" class="card-text">Logs, traces, metrics, alerts</text><text x="1600" y="291" class="small">SLOs • real-user monitoring</text>
+
+  <path d="M262 260H330" class="arrow"/><path d="M530 260H598" class="arrow"/><path d="M848 260H916" class="arrow"/><path d="M1154 260H1222" class="arrow"/>
+  <path d="M1035 312V386" class="arrow"/><path d="M1706 312V787" class="dashed"/>
+
+  <text x="68" y="397" class="lane">CORE MARKETPLACE SERVICES</text>
+  <rect x="50" y="418" width="1820" height="261" rx="22" fill="#ffffff" stroke="#dce5ef"/>
+  <rect x="81" y="453" width="218" height="166" rx="15" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="101" y="472" width="73" height="22" rx="11" fill="#dcfce7"/><text x="114" y="487" class="tag">DISCOVER</text>
+  <text x="101" y="522" class="card-title">Listing service</text><text x="101" y="547" class="card-text">Homes, hosts, amenities,</text><text x="101" y="568" class="card-text">policies and availability views</text><text x="101" y="600" class="small">Write API • read projection</text>
+  <rect x="333" y="453" width="218" height="166" rx="15" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="353" y="472" width="73" height="22" rx="11" fill="#dcfce7"/><text x="366" y="487" class="tag">DISCOVER</text>
+  <text x="353" y="522" class="card-title">Search &amp; ranking</text><text x="353" y="547" class="card-text">Geo search, filters,</text><text x="353" y="568" class="card-text">personalization and maps</text><text x="353" y="600" class="small">Low-latency query API</text>
+  <rect x="585" y="453" width="218" height="166" rx="15" fill="#fff7ed" stroke="#fed7aa"/>
+  <rect x="605" y="472" width="85" height="22" rx="11" fill="#ffedd5"/><text x="617" y="487" class="tag">TRANSACT</text>
+  <text x="605" y="522" class="card-title">Booking engine</text><text x="605" y="547" class="card-text">Availability holds, quotes,</text><text x="605" y="568" class="card-text">reservations and cancellations</text><text x="605" y="600" class="small">Idempotent workflow</text>
+  <rect x="837" y="453" width="218" height="166" rx="15" fill="#fff7ed" stroke="#fed7aa"/>
+  <rect x="857" y="472" width="85" height="22" rx="11" fill="#ffedd5"/><text x="869" y="487" class="tag">TRANSACT</text>
+  <text x="857" y="522" class="card-title">Pricing &amp; payments</text><text x="857" y="547" class="card-text">Fees, taxes, payouts,</text><text x="857" y="568" class="card-text">payment orchestration</text><text x="857" y="600" class="small">PCI token provider</text>
+  <rect x="1089" y="453" width="218" height="166" rx="15" fill="#fdf4ff" stroke="#f5d0fe"/>
+  <rect x="1109" y="472" width="76" height="22" rx="11" fill="#fae8ff"/><text x="1121" y="487" class="tag">ENGAGE</text>
+  <text x="1109" y="522" class="card-title">Messaging &amp; reviews</text><text x="1109" y="547" class="card-text">Chat, notifications,</text><text x="1109" y="568" class="card-text">reviews and moderation</text><text x="1109" y="600" class="small">Realtime + async delivery</text>
+  <rect x="1341" y="453" width="218" height="166" rx="15" fill="#fdf4ff" stroke="#f5d0fe"/>
+  <rect x="1361" y="472" width="76" height="22" rx="11" fill="#fae8ff"/><text x="1373" y="487" class="tag">ENGAGE</text>
+  <text x="1361" y="522" class="card-title">Media pipeline</text><text x="1361" y="547" class="card-text">Uploads, virus scan,</text><text x="1361" y="568" class="card-text">image/video transforms</text><text x="1361" y="600" class="small">Signed direct uploads</text>
+  <rect x="1593" y="453" width="216" height="166" rx="15" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="1613" y="492" class="card-title">Admin &amp; support</text><text x="1613" y="522" class="card-text">Disputes, refunds, safety</text><text x="1613" y="544" class="card-text">and operations tooling</text><text x="1613" y="580" class="small">Audited access controls</text>
+  <path d="M1035 386V432H190V453" class="arrow"/><path d="M1035 432H442V453" class="arrow"/><path d="M1035 432V453" class="arrow"/><path d="M1035 432H946V453" class="arrow"/><path d="M1035 432H1198V453" class="arrow"/><path d="M1035 432H1450V453" class="arrow"/><path d="M1035 432H1701V453" class="arrow"/>
+
+  <text x="68" y="726" class="lane">DATA, SEARCH &amp; ASYNCHRONOUS PROCESSING</text>
+  <rect x="50" y="747" width="1820" height="166" rx="22" fill="#f6f4ff" stroke="#ddd6fe"/>
+  <rect x="83" y="782" width="286" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="106" y="816" class="card-title">PostgreSQL / Aurora</text><text x="106" y="841" class="card-text">Multi-AZ primary • read replicas</text><text x="106" y="862" class="small">Listings, users, bookings, payouts</text>
+  <rect x="411" y="782" width="245" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="434" y="816" class="card-title">Redis cluster</text><text x="434" y="841" class="card-text">Sessions, cached reads, locks</text><text x="434" y="862" class="small">Availability hold protection</text>
+  <rect x="698" y="782" width="257" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="721" y="816" class="card-title">OpenSearch</text><text x="721" y="841" class="card-text">Geo index, facets and ranking</text><text x="721" y="862" class="small">Cross-zone replicas</text>
+  <rect x="997" y="782" width="270" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1020" y="816" class="card-title">Object storage</text><text x="1020" y="841" class="card-text">Photos, videos, documents, backups</text><text x="1020" y="862" class="small">Lifecycle policies • CDN origin</text>
+  <rect x="1309" y="782" width="235" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1332" y="816" class="card-title">Event stream</text><text x="1332" y="841" class="card-text">Kafka / SQS event backbone</text><text x="1332" y="862" class="small">Outbox • retries • DLQs</text>
+  <rect x="1586" y="782" width="251" height="95" rx="15" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1609" y="816" class="card-title">Analytics lakehouse</text><text x="1609" y="841" class="card-text">BI, ML features, experimentation</text><text x="1609" y="862" class="small">Governed, de-identified data</text>
+  <path d="M190 619V782" class="arrow"/><path d="M694 619V731H534V782" class="arrow"/><path d="M442 619V731H826V782" class="arrow"/><path d="M1450 619V782" class="arrow"/><path d="M946 619V742H1426V782" class="arrow"/><path d="M1450 619V742H1711V782" class="dashed"/>
+
+  <text x="68" y="959" class="lane">RELIABLE DEPLOYMENT &amp; OPERATIONS</text>
+  <rect x="50" y="980" width="1820" height="66" rx="18" fill="#172033"/>
+  <text x="88" y="1020" fill="#ffffff" style="font:700 17px Arial, Helvetica, sans-serif">Private source control → CI quality gates → signed artifacts → canary / blue-green deployment</text>
+  <line x1="825" y1="994" x2="825" y2="1032" stroke="#475569"/><text x="852" y="1008" fill="#e2e8f0" style="font:600 13px Arial, Helvetica, sans-serif">Kubernetes / ECS across regions &amp; availability zones</text><text x="852" y="1029" fill="#94a3b8" style="font:400 12px Arial, Helvetica, sans-serif">Horizontal autoscaling • infrastructure as code • secrets manager • disaster recovery drills</text>
+  <line x1="1420" y1="994" x2="1420" y2="1032" stroke="#475569"/><text x="1447" y="1008" fill="#e2e8f0" style="font:600 13px Arial, Helvetica, sans-serif">SLO-driven operations</text><text x="1447" y="1029" fill="#94a3b8" style="font:400 12px Arial, Helvetica, sans-serif">Alerting • runbooks • audit logs</text>
+</svg>
